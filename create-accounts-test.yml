@@ -1,0 +1,10 @@
+config:
+  target: "http://localhost:3000" # Replace with the URL you want to test
+  phases:
+    - duration: 20         # Test duration in seconds
+      arrivalRate: 1000      # Number of new requests per second
+
+scenarios:
+  - flow:
+      - get:
+          url: "/users/create-accounts"         # Path to the endpoint to test
